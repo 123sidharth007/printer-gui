@@ -73,7 +73,7 @@ def payment_success(order_id):
                     del app.config['ORDER_FILES'][order_id]
                     return render_template('success.html')
                 else:
-                    return render_template('index.html', error="Failed to send print job  to printer")
+                    return render_template('index.html', error="  printer is offline")
 
             except requests.RequestException:
                 return render_template('index.html', error="printer is not reachable")
