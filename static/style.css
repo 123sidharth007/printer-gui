@@ -1,0 +1,94 @@
+/* Global */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f9fbfd;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background: #0066cc;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Container */
+.container {
+    max-width: 500px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.container h2 {
+    margin-top: 0;
+    color: #222;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* File Input */
+.file-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #444;
+}
+
+input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0055aa;
+}
+
+/* Error Message */
+.error {
+    color: #d9534f;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 15px;
+    background: #f1f1f1;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #ddd;
+}

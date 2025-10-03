@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Make Payment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Required</h1>
+        <p>Cost: ₹ {{ cost }}</p>
+        <p>Please complete the payment to print your document.</p>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <script>
+            var options = {
+                "key": "{{ key_id }}",
+                "amount": "{{ cost * 100 }}",
+                "currency": "INR",
+                "order_id": "{{ order_id }}",
+                "name": "Print Vending Machine",
+                "description": "Payment for printing",
+                "handler": function (response) {
+                    window.location.href = "/payment_success/" + response.razorpay_order_id;
+                }
+            };
+            var rzp = new Razorpay(options);
+            rzp.on('payment.failed', function (response) {
+                alert("Payment failed! Please try again.");
+            });
+            rzp.open();
+        </script>
+    </div>
+</body>
+</html>
