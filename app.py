@@ -14,7 +14,7 @@ app.config['ORDER_FILES'] = {}
 razorpay_client = razorpay.Client(auth=("rzp_test_RG9lbxm3vi0JVH", "csWpoDM8sl3DLubjjge3XlI8"))
 
 # Replace with your active Linux/ngrok print URL
-LINUX_PRINT_URL = "https://savannah-air-charge-connector.trycloudflare.com/print"
+LINUX_PRINT_URL = "http://192.168.0.101:5001/print"
 
 # ---------------------------
 # Home Page
